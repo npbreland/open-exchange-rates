@@ -1,0 +1,12 @@
+{
+    "name": "nick/i3bar-exchange-rate",
+    "authors": [
+        {
+            "name": "Nick Breland",
+            "email": "npbreland@tutanota.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
