@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Converts USD to a specified currency. Free plan does not allow changing base
+ * currency from USD. Free plan allows up to 1000 requests per month.
+ */
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -20,7 +25,6 @@ define('URL', 'https://openexchangerates.org/api/latest.json?app_id='.APP_ID);
 
 $code = $argv[1];
 
-// Note: free plan allows up to 1000 requests per month.
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, URL);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
