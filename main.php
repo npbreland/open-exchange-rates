@@ -7,7 +7,8 @@ $dotenv->load();
 
 define('APP_ID', $_ENV['APP_ID']);
 
-// Write curl request to get data from Open Exchange Rate API
+// Note: free plan allows up to 1000 requests per month.
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://openexchangerates.org/api/latest.json?app_id=".APP_ID);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
