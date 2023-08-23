@@ -38,4 +38,4 @@ if (!isset($data['rates'][$code])) {
     exit;
 }
 
-echo $data['rates'][$code];
+echo number_format($data['rates'][$code], 2) . PHP_EOL;
